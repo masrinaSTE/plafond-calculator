@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Plafond Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="loan_amount">Pinjaman</string>
+    <string name="month_duration">Durasi</string>
+    <string name="interest">Bunga</string>
+
+
+    <string name="hint_loan">Jumlah Pinjaman</string>
+    <string name="hint_duration">Durasi</string>
+    <string name="hint_interest">Bunga</string>
+    <string name="btn_calculate_loan">Calculate</string>
+    <string name="monthly_payment_label">Total Angsuran</string>
+    <string name="total_monthly_payment">Rp 1.500.000</string>
+    <string name="err_msg_loan">Enter amount of loan</string>
+    <string name="err_msg_duration">Enter number of duration</string>
+    <string name="err_msg_interest">Enter number of interest</string>
+</resources>
