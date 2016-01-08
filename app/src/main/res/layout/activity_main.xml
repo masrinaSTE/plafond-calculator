@@ -17,7 +17,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/calculator_view"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
@@ -25,12 +25,21 @@
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingTop="60dp">
+        android:paddingTop="20dp">
 
+
+        <Spinner
+            android:id="@+id/input_package"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/package_type"
+            android:prompt="@string/choose_package">
+        </Spinner>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_loan"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
 
             <EditText
                 android:id="@+id/input_loan"
@@ -45,7 +54,8 @@
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_duration"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp">
 
             <EditText
                 android:id="@+id/input_duration"
@@ -56,27 +66,15 @@
                 android:hint="@string/hint_duration" />
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_interest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/input_interest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorConcreteGray"
-                android:inputType="number|numberDecimal"
-                android:hint="@string/hint_interest" />
-        </android.support.design.widget.TextInputLayout>
-
         <Button android:id="@+id/btn_calculate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn_calculate_loan"
             android:background="@drawable/blue_round_corner"
-            android:layout_marginTop="20dp"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
         <TextView
@@ -84,22 +82,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/monthly_payment_label"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            />
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/btn_calculate"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/total_monthly_payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/total_monthly_payment"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/monthly_payment_label"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp" />
 
-    </LinearLayout>
+    </RelativeLayout>
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/reset_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
