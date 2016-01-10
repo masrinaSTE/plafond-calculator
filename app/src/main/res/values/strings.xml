@@ -8,13 +8,20 @@
     <string name="interest">Bunga</string>
 
 
-    <string name="hint_loan">Jumlah Pinjaman</string>
-    <string name="hint_duration">Durasi</string>
-    <string name="hint_interest">Bunga</string>
+    <string name="hint_loan">Jumlah Pinjaman (Rp)</string>
+    <string name="hint_duration">Durasi (bulan)</string>
+    <string name="hint_interest">Bunga (%)</string>
     <string name="btn_calculate_loan">Calculate</string>
     <string name="monthly_payment_label">Total Angsuran</string>
-    <string name="total_monthly_payment">Rp 1.500.000</string>
+    <string name="total_monthly_payment">Rp 0</string>
     <string name="err_msg_loan">Enter amount of loan</string>
     <string name="err_msg_duration">Enter number of duration</string>
     <string name="err_msg_interest">Enter number of interest</string>
+    <string name="label_package">Paket</string>
+    <string name="choose_package">Pilih Paket</string>
+    <string-array name="package_type">
+        <item>Paket kp3m</item>
+        <item>Paket SUP</item>
+        <item>Paket Reguler</item>
+    </string-array>
 </resources>
